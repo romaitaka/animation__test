@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    background-color: white;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+}
+
+.container {
+    width: clamp(90vw, 100vw, 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 20px;
+    height: 300px;
+    background: url('img/bg_baggins.jpg') top center / cover no-repeat;
+    z-index: 0;
+    position: relative;
+}
+
+.card-two {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 20px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.card__btn {
+    background: #fff;
+    opacity: .8;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    transition: transform 0.1s, box-shadow 0.1s;
+    cursor: pointer;
+    box-shadow: 0 4px #999;
+}
+
+.card__btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px #666;
+}
+
+#logo-feature {
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#qr-feature {
+    border-radius: 20px;
+}
+
+.image {
+    width: auto;
+    height: 70%;
+}
+
+@media screen and (max-width: 767px) {
+    .image {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* Modal window */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    /* 15% от верха и по центру */
+    padding: 100px;
+    border: 1px solid #888;
+    width: 60%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-text {
+    text-align: center;
+}
